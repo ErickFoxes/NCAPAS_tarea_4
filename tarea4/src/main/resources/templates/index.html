@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" th:action="@{/producto}" th:object="${producto}">
+		
+		<input th:field="*{code}" id="code" type="text" placeholder="Ingrese Codigo de Producto Universal"/>
+		<span th:errors="*{code}" style="color: #FF0000"></span>
+		<br>
+		<input th:field="*{name}" id="name" type="text" placeholder="Ingrese Nombre Producto"/>
+		<span th:errors="*{name}" style="color: #FF0000"></span>
+		<br>
+		<input th:field="*{marca}" id="marca" type="text" placeholder="Ingrese Marca"/>
+		<span th:errors="*{marca}" style="color: #FF0000"></span>
+		<br>
+		<input th:field="*{desc}" id="desc" type="text" placeholder="Ingrese Descripcion"/>
+		<span th:errors="*{desc}" style="color: #FF0000"></span>
+		<br>
+		<input th:field="*{exis}" id="exis" type="text" placeholder="Ingrese Existencias"/>
+		<span th:errors="*{exis}" style="color: #FF0000"></span>
+		<br>
+		<input th:field="*{fecI}" id="fecI" type="text" placeholder="Ingrese Fecha de ingreso"/>
+		<span th:errors="*{fecI}" style="color: #FF0000"></span>
+		<br>
+		 <input type="submit"  value="Guardar Producto">
+    </form>
+</body>
+</html>
